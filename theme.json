@@ -1,5 +1,5 @@
 {
-	"theme_name": "mingleburb",
+	"name": "mingleburb",
 	"sound_maps": [
 		{ "trigger_name": "runprogram", "key_map": { "mode": "i", "key_chord": "<BS>" }, "sound": "pop.wav" },
 		{ "auto_command": "VimEnter", "sound": "chestopen.wav" },
