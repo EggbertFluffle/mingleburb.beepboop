@@ -1,0 +1,47 @@
+return {
+	name = "mingleburb",
+	sound_maps = {
+		{
+			trigger_name = "runprogram",
+			key_map = {
+				mode = "i",
+				key_chord = "<BS>" 
+			},
+			sound = "pop.wav" 
+		},
+		{
+			auto_command = "VimEnter",
+			sound = "chestopen.wav"
+		},
+		{ 
+			trigger_name = "chestclosed",
+			auto_command = "VimLeavePre",
+			sound = "chestclosed.wav"
+		},
+		{
+			auto_command = "InsertCharPre",
+			sounds = {
+				"stone1.wav",
+				"stone2.wav",
+				"stone3.wav",
+				"stone4.wav"
+			}
+		},
+		{
+			auto_command = "TextYankPost",
+			sounds = {
+				"hit1.wav",
+				"hit2.wav",
+				"hit3.wav"
+			},
+		},
+		{
+			auto_command = "BufWrite",
+			sounds = { 
+				"open_flip1.wav",
+				"open_flip2.wav",
+				"open_flip3.wav" 
+			}
+		}
+	}
+}
