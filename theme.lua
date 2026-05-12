@@ -1,25 +1,29 @@
+vim.keymap.set("n", "<leader>pl", function ()
+	require("beepboop").play("runprogram")
+end)
+
 return {
 	name = "mingleburb",
 	sound_maps = {
 		{
-			trigger_name = "runprogram",
-			key_map = {
+			trigger = "runprogram",
+			keymap = {
 				mode = "i",
-				key_chord = "<BS>" 
+				keychord = "<BS>"
 			},
-			sound = "pop.wav" 
+			sound = "pop.wav"
 		},
 		{
-			auto_command = "VimEnter",
+			autocommand = "VimEnter",
 			sound = "chestopen.wav"
 		},
-		{ 
-			trigger_name = "chestclosed",
-			auto_command = "VimLeavePre",
+		{
+			trigger = "chestclosed",
+			autocommand = "VimLeavePre",
 			sound = "chestclosed.wav"
 		},
 		{
-			auto_command = "InsertCharPre",
+			autocommand = "InsertCharPre",
 			sounds = {
 				"stone1.wav",
 				"stone2.wav",
@@ -28,7 +32,7 @@ return {
 			}
 		},
 		{
-			auto_command = "TextYankPost",
+			autocommand = "TextYankPost",
 			sounds = {
 				"hit1.wav",
 				"hit2.wav",
@@ -36,11 +40,11 @@ return {
 			},
 		},
 		{
-			auto_command = "BufWrite",
-			sounds = { 
+			autocommand = "BufWrite",
+			sounds = {
 				"open_flip1.wav",
 				"open_flip2.wav",
-				"open_flip3.wav" 
+				"open_flip3.wav"
 			}
 		}
 	}
